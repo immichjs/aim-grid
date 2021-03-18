@@ -4,12 +4,10 @@ const area = document.getElementById('area')
 let col, row
 
 function gridGen () {
-    col = Math.random() * (4 + 4) - 4
-    row = Math.random() * (4 + 4) - 4
+    col = Math.random() * (5 + 5) - 5
+    row = Math.random() * (5 + 5) - 5
 
-    if (col <= 0 || row <= 0) {
-        gridGen()
-    }
+    if (col <= 0 || row <= 0) gridGen()
 }
 
 function randomCircles () {
@@ -25,9 +23,15 @@ function randomCircles () {
     area.appendChild(circle)
 
     circle.onclick = () => {
-        area.removeChild(circle)
-        console.log('Click efetuado')
-        randomCircles()
+        if (col == gridGen() && row == gridGen()) {
+            area.removeChild(circle)
+            console.log('Click efetuado')
+            randomCircles()
+        } else {
+            area.removeChild(circle)
+            console.log('Click efetuado')
+            randomCircles()
+        }
     }
 
 }

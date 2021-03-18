@@ -4,7 +4,7 @@ const { app, BrowserWindow } = require('electron')
 function createWindow () {
     let mainWindow = new BrowserWindow({
         width: 800,
-        height: 600,
+        height: 700,
         icon: __dirname + '/src/img/osu-icon.png',
         resizable: false
     })

@@ -5,8 +5,9 @@
 }
 
 #app {
-    background: rgba(0, 0, 0, 0.9);
+    background: #21222C;
     height: 100vh;
+    cursor: crosshair;
 }
 
 .container {
@@ -16,20 +17,28 @@
     height: 100%;
 }
 
-#area {
-    width: 100vw;
+.container-content {
+    position: relative;
+    box-sizing: border-box;
     height: 100vh;
+}
+
+#area {
+    height: 80%;
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
-    padding: 64px;
-    position: relative
+    border: 5px dashed #282A36;
+    box-sizing: border-box;
+    margin: 64px 116px;
 }
 .circle {
-    width: 100px;
-    height: 100px;
+    width: 90%;
+    height: 90%;
     border-radius: 50%;
-    background: #fff;
-    box-shadow: 0px 0px 10px -10px lightblue;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(200,200,200,1) 100%);
+    box-shadow: 0px 0px 10px -4px #fff;
     user-select: none;
     justify-self: center;
 }
