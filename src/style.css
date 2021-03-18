@@ -21,17 +21,17 @@
     position: relative;
     box-sizing: border-box;
     height: 100vh;
+    padding: 32px;
 }
 
 #area {
-    height: 80%;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     border: 5px dashed #282A36;
     box-sizing: border-box;
-    margin: 64px 70px;
 }
 .circle {
     width: 90%;
