@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#app {
+    background: #21222C;
+    height: 100vh;
+    cursor: url('../assets/crosshair.png'), auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+}
+
+.container-content {
+    position: relative;
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 32px;
+}
+
+#area {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    border: 1px solid #FBA7D2;
+    box-sizing: border-box;
+}
+.circle {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 20px -10px #F2387F;
+    user-select: none;
+    justify-self: center;
+    filter: blur(1px);
+}
+
+.score {
+    position: absolute;
+    color: #fff;
+    top: 5px;
+    left: 50%;
+    font-size: 1.2rem;
+}
+
+.counter {
+    position: absolute;
+    color: #fff;
+    top: 6px;
+    left: 88%;
+}
+
+#start {
+    position: relative;
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    top: -400px;
+    outline: none;
+    width: 50%;
+    transition: 0.2s;
+    color: #fff;
+    background: #FBA7D2;
+    align-self: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#start:hover {
+    transform: scale(1.03);
+    background: #fff;
+    color: #FBA7D2;
+}

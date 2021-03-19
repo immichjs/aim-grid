@@ -5,7 +5,7 @@ function createWindow () {
     let mainWindow = new BrowserWindow({
         width: 700,
         height: 700,
-        icon: __dirname + '/src/img/osu-icon.png',
+        icon: __dirname + '/src/assets/perspective.png',
         resizable: false
     })
 
