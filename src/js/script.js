@@ -51,8 +51,3 @@ function scorePoints () {
 randomCircles()
 randomCircles()
 randomCircles()
-
-// setTimeout(function () {
-//     alert("Acabou o tempo, seu score foi: " + currentValue)
-//     currentValue = 0
-// }, 30000);

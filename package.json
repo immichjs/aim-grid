@@ -1,5 +1,5 @@
 {
-  "name": "osu_simulator",
+  "name": "Aim_Grid",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -8,7 +8,7 @@
     "start": "electron ."
   },
   "keywords": [],
-  "author": "",
+  "author": "Mich",
   "license": "ISC",
   "devDependencies": {
     "electron": "^9.0.5"
