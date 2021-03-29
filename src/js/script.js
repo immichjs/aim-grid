@@ -1,8 +1,17 @@
 const area = document.getElementById('area')
 const score = document.querySelector('.score')
 
-
 let col, row
+
+function createCircles () {
+    const circle = document.createElement('div')
+
+    circle.setAttribute('class', 'circle')
+    circle.setAttribute('id', 'circle')
+    circle.setAttribute('draggrable', 'false')
+
+    return circle
+}
 
 function gridGen () {
     col = Math.random() * (5 + 5) - 5
@@ -20,10 +29,7 @@ function clickCircle (param) {
 }
 
 function randomCircles () {
-    const circle = document.createElement('div')
-    circle.setAttribute('class', 'circle')
-    circle.setAttribute('id', 'circle')
-    circle.setAttribute('draggrable', 'false')
+    const circle = createCircles()
     
     gridGen()
     circle.style.gridColumn = Math.ceil(col)
@@ -48,6 +54,7 @@ function scorePoints () {
     score.innerHTML = currentScore
 }
 
+randomCircles()
 randomCircles()
 randomCircles()
 randomCircles()
