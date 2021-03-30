@@ -1,7 +1,6 @@
 const area = document.getElementById('area')
 const score = document.querySelector('.score')
 
-let col, row
 
 function createCircles () {
     const circle = document.createElement('div')
@@ -13,48 +12,41 @@ function createCircles () {
     return circle
 }
 
-function gridGen () {
-    col = Math.random() * (5 + 5) - 5
-    row = Math.random() * (5 + 5) - 5
-    
-    if (col <= 0 || row <= 0) gridGen()
+function gridGenerator () {
+    return {
+        col: Math.random() * (5 + 5) - 5,
+        row: Math.random() * (5 + 5) - 5
+    }
 }
 
 function clickCircle (param) {
     param.onclick = () => {
         area.removeChild(param)
         scorePoints()
-        randomCircles()
+        applyGridCircle()
     }
 }
 
-function randomCircles () {
+
+function applyGridCircle () {
     const circle = createCircles()
-    
-    gridGen()
-    circle.style.gridColumn = Math.ceil(col)
-    circle.style.gridRow = Math.ceil(row)
+    const grids = gridGenerator()
+
+    circle.style.gridColumn = Math.ceil(Math.abs(grids.col))
+    circle.style.gridRow = Math.ceil(Math.abs(grids.row))
     
     area.appendChild(circle)
     
     clickCircle(circle)
 }
 
-
-function verifyGridArea () {
-    for (let element in circles) {
-        console.log(element)
-    }
-}
-
 let currentScore = 0
 
 function scorePoints () {
-    currentScore += 1
+    currentScore += 64
     score.innerHTML = currentScore
 }
 
-randomCircles()
-randomCircles()
-randomCircles()
-randomCircles()
+applyGridCircle()
+applyGridCircle()
+applyGridCircle()
