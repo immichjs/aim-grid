@@ -12,10 +12,14 @@ function createCircles () {
     return circle
 }
 
+function mathGen () {
+    return Math.random() * (5 + 5) - 5
+}
+
 function gridGenerator () {
     return {
-        col: Math.random() * (5 + 5) - 5,
-        row: Math.random() * (5 + 5) - 5
+        col: mathGen(),
+        row: mathGen()
     }
 }
 
@@ -43,7 +47,7 @@ function applyGridCircle () {
 let currentScore = 0
 
 function scorePoints () {
-    currentScore += 64
+    currentScore += Math.pow(2 * 2, 2)
     score.innerHTML = currentScore
 }
 

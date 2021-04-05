@@ -6,13 +6,11 @@ function decay (counter, second, score) {
   setTimeout(() => {
     clearInterval(counter)
 
-    startButton.style.display = 'block'
     second = 0
     secondSpan.innerHTML = second
 
     alert(`Sua pontuação foi de: ${score.textContent}`)
     menu.classList.toggle('hide')
-    startButton.style.display = 'grid'
   }, 30999)
 }
 
@@ -24,9 +22,9 @@ function startGame () {
   const counter = setInterval(() => {
     second--
     
-    second.toString().length == 1 ?
-      secondSpan.innerHTML = `0${second}` :
-      secondSpan.innerHTML = second
+    second.toString().length == 1
+      ? secondSpan.innerHTML = `0${second}`
+      : secondSpan.innerHTML = second
       return counter
     }, 1000)
 
